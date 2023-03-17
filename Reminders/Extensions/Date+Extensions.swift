@@ -22,4 +22,12 @@ extension Date {
         let calendar = Calendar.current
         return calendar.isDateInTomorrow(self)
     }
+    
+    var tomorrow: Date? {
+        Calendar.current.date(byAdding: .day, value: 1, to: self)
+    }
+    
+    var beginningOfDay: Date? {
+        Calendar.current.startOfDay(for: self)
+    }
 }
