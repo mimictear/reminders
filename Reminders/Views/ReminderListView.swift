@@ -12,6 +12,7 @@ struct ReminderListView: View {
     @State private var selectedReminder: Reminder?
     @State private var showReminderDetail = false
     
+    // TODO: passing FetchedResults between views is a bad idea
     let reminders: FetchedResults<Reminder>
     
     var body: some View {

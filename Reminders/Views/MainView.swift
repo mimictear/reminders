@@ -40,6 +40,9 @@ struct MainView: View {
             VStack {
                 ScrollView {
                     HStack {
+                        // TODO: collapse these stuff into builder function
+                        // TODO: make kinda enum for all type of cards (today, all, etc.)
+                        // which would be contain icon, title, and tint color
                         NavigationLink {
                             ReminderListView(reminders: todayRemindersResult)
                         } label: {
@@ -84,7 +87,8 @@ struct MainView: View {
                         .bold()
                         .padding([.bottom, .top])
                     
-                    RemindersListView(lists: lists)
+                    //RemindersListView(lists: lists)
+                    RemindersListView()
                 }
             }
             .sheet(isPresented: $createNewListPressed) {

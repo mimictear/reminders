@@ -11,7 +11,8 @@ struct RemindersListView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    let lists: FetchedResults<ReminderList>
+    @FetchRequest(sortDescriptors: [])
+    private var lists: FetchedResults<ReminderList>        
     
     var body: some View {
         NavigationStack {
